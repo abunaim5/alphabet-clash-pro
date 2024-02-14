@@ -12,3 +12,9 @@
 .font-inter {
     font-family: "Inter", sans-serif;
 }
+
+.kbd {
+    font-family: "Inter", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
