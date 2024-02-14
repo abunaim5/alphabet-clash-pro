@@ -1,5 +1,13 @@
 function playNow() {
     addElementsClassById('home-screen');
+
     removeElementsClassById('playground-screen');
-    getRandomNumber()
+
+    const index = getRandomNumber();
+
+    const alphabet = showAlphabetByIndex(index);
+
+    setElementsInnerTextById('show-alphabet', alphabet);
+
+    setElementBgColorById(alphabet);
 }
