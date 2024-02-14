@@ -15,16 +15,17 @@
 <body class="font-poppins">
     <main class="min-h-screen bg-[#010313] bg-[url('images/background.png')] bg-no-repeat bg-center text-center">
         <!-- home screen section -->
-        <section class="home min-h-screen flex flex-col gap-10 justify-center items-center hidden">
+        <section id="home-screen" class="min-h-screen flex flex-col gap-10 justify-center items-center">
             <div class="space-y-20">
                 <h1 class="text-[10.5rem] text-white font-anton uppercase">Alphabet Clash</h1>
                 <!-- play button -->
-                <button class="bg-white rounded-md font-semibold text-2xl px-6 py-4 hover:bg-violet-400">Play
+                <button onclick="playNow()"
+                    class="bg-white rounded-md font-semibold text-2xl px-6 py-4 hover:bg-violet-400">Play
                     Now</button>
             </div>
         </section>
         <!-- playground screen section -->
-        <section class="playground pt-20 space-y-20 hidden">
+        <section id="playground-screen" class="pt-20 space-y-20 hidden">
             <!-- screen -->
             <div class="flex items-center justify-center">
                 <div
@@ -32,44 +33,44 @@
                     <p class="text-white text-lg bg-[#2F2941] px-6 pb-4 rounded-b-2xl">Don't watch keyboard while
                         playing...</p>
                     <div class="flex-1 flex items-center">
-                        <h2 class="text-9xl text-[#010313] font-semibold w-full">Y</h2>
+                        <h2 id="show-alphabet" class="text-9xl text-[#010313] font-semibold w-full uppercase">Y</h2>
                     </div>
                 </div>
             </div>
             <!-- keyboard -->
             <div class="space-y-2">
                 <div class="flex justify-center gap-2 my-1 w-full">
-                    <kbd class="kbd">q</kbd>
-                    <kbd class="kbd">w</kbd>
-                    <kbd class="kbd">e</kbd>
-                    <kbd class="kbd">r</kbd>
-                    <kbd class="kbd">t</kbd>
-                    <kbd class="kbd">y</kbd>
-                    <kbd class="kbd">u</kbd>
-                    <kbd class="kbd">i</kbd>
-                    <kbd class="kbd">o</kbd>
-                    <kbd class="kbd">p</kbd>
+                    <kbd id="q" class="kbd">q</kbd>
+                    <kbd id="w" class="kbd">w</kbd>
+                    <kbd id="e" class="kbd">e</kbd>
+                    <kbd id="r" class="kbd">r</kbd>
+                    <kbd id="t" class="kbd">t</kbd>
+                    <kbd id="y" class="kbd">y</kbd>
+                    <kbd id="u" class="kbd">u</kbd>
+                    <kbd id="i" class="kbd">i</kbd>
+                    <kbd id="o" class="kbd">o</kbd>
+                    <kbd id="p" class="kbd">p</kbd>
                 </div>
                 <div class="flex justify-center gap-2 my-1 w-full">
-                    <kbd class="kbd">a</kbd>
-                    <kbd class="kbd">s</kbd>
-                    <kbd class="kbd">d</kbd>
-                    <kbd class="kbd">f</kbd>
-                    <kbd class="kbd">g</kbd>
-                    <kbd class="kbd">h</kbd>
-                    <kbd class="kbd">j</kbd>
-                    <kbd class="kbd">k</kbd>
-                    <kbd class="kbd">l</kbd>
+                    <kbd id="a" class="kbd">a</kbd>
+                    <kbd id="s" class="kbd">s</kbd>
+                    <kbd id="d" class="kbd">d</kbd>
+                    <kbd id="f" class="kbd">f</kbd>
+                    <kbd id="g" class="kbd">g</kbd>
+                    <kbd id="h" class="kbd">h</kbd>
+                    <kbd id="j" class="kbd">j</kbd>
+                    <kbd id="k" class="kbd">k</kbd>
+                    <kbd id="l" class="kbd">l</kbd>
                 </div>
                 <div class="flex justify-center gap-2 my-1 w-full">
-                    <kbd class="kbd">z</kbd>
-                    <kbd class="kbd">x</kbd>
-                    <kbd class="kbd">c</kbd>
-                    <kbd class="kbd">v</kbd>
-                    <kbd class="kbd">b</kbd>
-                    <kbd class="kbd">n</kbd>
-                    <kbd class="kbd">m</kbd>
-                    <kbd class="kbd">/</kbd>
+                    <kbd id="z" class="kbd">z</kbd>
+                    <kbd id="x" class="kbd">x</kbd>
+                    <kbd id="c" class="kbd">c</kbd>
+                    <kbd id="v" class="kbd">v</kbd>
+                    <kbd id="b" class="kbd">b</kbd>
+                    <kbd id="n" class="kbd">n</kbd>
+                    <kbd id="m" class="kbd">m</kbd>
+                    <kbd id="/" class="kbd">/</kbd>
                 </div>
             </div>
             <!-- life score button -->
@@ -88,8 +89,8 @@
                 </button>
             </div>
         </section>
-        <!-- end screen section -->
-        <section class="score-board min-h-screen flex justify-center items-center">
+        <!-- final score board screen section -->
+        <section class="score-board min-h-screen flex justify-center items-center hidden">
             <div class="space-y-5 bg-[#FFFFFF33] p-7 rounded-2xl border-2 border-gray-400">
                 <h1 class="text-6xl text-white"><span class="font-extrabold">Score :</span> <span
                         class="font-medium">14</span></h1>
@@ -100,6 +101,8 @@
             </div>
         </section>
     </main>
+    <script src="js/utility.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
