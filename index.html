@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpha Clash</title>
+    <!-- tailwind and daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    
+
+<body class="font-poppins">
+    <main class="min-h-screen bg-[#010313] bg-[url('images/background.png')] bg-no-repeat bg-center text-center">
+        <!-- home screen section -->
+        <section class="home min-h-screen flex flex-col gap-10 justify-center items-center">
+            <div class="space-y-20">
+                <h1 class="text-[10.5rem] text-white font-anton uppercase">Alphabet Clash</h1>
+                <!-- play button -->
+                <button class="bg-white rounded-md font-semibold text-2xl px-6 py-4 hover:bg-violet-400">Play
+                    Now</button>
+            </div>
+        </section>
+        <!-- playground screen section -->
+        <section class="playground">
+
+        </section>
+        <!-- end screen section -->
+        <section class="end"></section>
+    </main>
 </body>
+
 </html>
