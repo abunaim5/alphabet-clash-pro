@@ -18,6 +18,7 @@
         <section id="home-screen" class="min-h-screen flex flex-col gap-10 justify-center items-center">
             <div class="space-y-20">
                 <h1 class="text-[10.5rem] text-white font-anton uppercase">Alphabet Clash</h1>
+                <h3 class="text-xl text-white font-medium">Unleash Your Keyboard Kung Fu : Press "Enter" to Play</h3>
                 <!-- play button -->
                 <button onclick="playNow()"
                     class="bg-white rounded-md font-semibold text-2xl px-6 py-4 hover:bg-violet-400">Play
@@ -92,8 +93,9 @@
         <!-- final score board screen section -->
         <section id="score-board" class="min-h-screen flex justify-center items-center hidden">
             <div class="space-y-5 bg-[#FFFFFF33] p-7 rounded-2xl border-2 border-gray-400">
-                <h1 class="text-6xl text-white"><span class="font-extrabold">Score :</span> <span
-                        class="font-medium">14</span></h1>
+                <h3 class="text-3xl text-white font-medium">Game Over !</h3>
+                <h1 class="text-6xl text-white"><span class="font-extrabold">Score :</span> <span id="final-score"
+                        class="font-medium">0</span></h1>
                 <button onclick="playNow()"
                     class="bg-white rounded-md font-semibold text-2xl px-6 py-4 hover:bg-blue-800 hover:text-white">Play
                     Again</button>

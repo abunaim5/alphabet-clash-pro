@@ -1,6 +1,9 @@
 // keyboard event
 function handleKeyboardEventByKeys(e) {
     const keyboardKey = e.key;
+    if (keyboardKey === 'Escape') {
+        gameOver();
+    }
     const currentAlphabet = getElementsInnerTextById('current-alphabet');
     if (keyboardKey === currentAlphabet) {
         const currentScore = getElementsValueById('current-score');
@@ -16,6 +19,9 @@ function handleKeyboardEventByKeys(e) {
         if (availableLife === 0) {
             gameOver();
         }
+    }
+    if (keyboardKey === 'Enter') {
+        playNow();
     }
 }
 document.addEventListener('keyup', handleKeyboardEventByKeys);
@@ -35,7 +41,6 @@ function continueGame() {
     // generate random index number
     const index = getRandomNumber();
     const alphabet = showAlphabetByIndex(index);
-    console.log(alphabet);
     setElementsInnerTextById('current-alphabet', alphabet);
     setElementBgColorById(alphabet);
 }
@@ -47,4 +52,6 @@ function gameOver() {
     removeElementsClassById('score-board');
     const currentAlphabet = getElementsInnerTextById('current-alphabet');
     removeElementBgColorById(currentAlphabet);
+    const currentScore = getElementsInnerTextById('current-score');
+    setElementsInnerTextById('final-score', currentScore);
 }
